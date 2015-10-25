@@ -1,0 +1,678 @@
+::-webkit-input-placeholder
+	color: $placeholder_color
+	
+
+::-moz-placeholder
+	color: $placeholder_color
+
+input:-ms-input-placeholder
+	color: $placeholder_color
+
+
+%bszbb
+	@include box-sizing(border-box)
+
+/* clearfix
+/* --------------------------------------------- */
+
+
+%clear
+	&:before,
+	&:after
+		display: table
+		content: ''
+		clear: both
+	&:after
+		clear: both
+
+.clearfix-block
+	clear: both
+	overflow: hidden
+	margin: 0
+	padding: 0
+	font-size: 0
+	line-height: 0
+
+.clearfix 
+	&:before,
+	&:after
+		display: table
+		content: ''
+		clear: both
+	&:after
+		clear: both
+
+
+/* clearfix
+/* ---------------------------------------END--- */
+
+%center
+	width: $page_w
+	margin: auto
+
+
+
+/* page
+/* --------------------------------------------- */
+
+.page
+	min-width: $page_w_min
+	&__header
+		//background: #adf785
+
+
+	&__footer
+		position: relative
+		//background: #f1acf2
+
+	
+/* page
+/* ---------------------------------------END--- */
+
+
+/* promo
+/* --------------------------------------------- */
+
+.promo
+	background: $main_color_light
+	padding: 0px 0 54px 0
+	overflow: hidden
+
+/* promo
+/* ---------------------------------------END--- */
+
+
+/* section
+/* --------------------------------------------- */
+
+.section
+	&_space
+		padding-top: 40px
+		padding-bottom: 40px
+		
+	&__body
+		@extend %center
+
+/* section
+/* ---------------------------------------END--- */
+
+
+/* section-h
+/* --------------------------------------------- */
+
+.section-h
+	background: $main_color
+	&__body
+		@extend %center
+	&__h
+		margin: 0
+		padding: 28px 0
+		
+
+/* section-h
+/* ---------------------------------------END--- */
+
+
+/* header
+/* --------------------------------------------- */
+
+.header
+	$header_h: 136px
+	background: $main_color2
+	color: #fff
+	a
+		+link-color ($color: #fff)
+	&__body
+		position: relative
+		@extend %center
+		
+	&__in
+		position: relative
+		height: $header_h
+		@extend %bszbb
+
+	&__phone
+		position: absolute
+		top: 50px
+		left: 300px
+
+	&__time
+		position: absolute
+		top: 55px
+		left: 602px
+
+	&__socials
+		position: absolute
+		top: 48px
+		right: 0
+		
+
+/* header
+/* ---------------------------------------END--- */
+
+
+/* socials
+/* --------------------------------------------- */
+
+.socials
+	@extend %clear
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		margin: 0
+		padding: 0
+		float: left
+		
+	&__a
+		display: block
+		width: 37px
+		height: 36px
+		margin-left: 14px
+		border-bottom: none
+
+		&_vk
+			+sprite-icon("vk")
+		&_fb
+			+sprite-icon("fb")
+		&_tw
+			+sprite-icon("tw")
+
+
+/* socials
+/* ---------------------------------------END--- */
+
+
+/* made-by
+/* --------------------------------------------- */
+
+.made-by
+	a
+		+link-color ($color_visited: none)
+
+/* made-by
+/* ---------------------------------------END--- */
+
+
+/* columns
+/* --------------------------------------------- */
+
+.columns
+	display: table
+	width: 100%
+
+	&_number_3
+
+	&_space_bottom
+		margin-bottom: 35px
+		
+
+	&__i
+		width: 50%
+		display: table-cell
+		vertical-align: top
+
+		&_first
+			padding-right: 40px
+
+		&_second
+			padding-left: 40px
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+			margin-top: 0
+
+	&_number_3 &__i
+		width: (100%/3)
+		padding-right: 20px
+
+
+/* columns
+/* ---------------------------------------END--- */
+
+
+/* prices-list
+/* --------------------------------------------- */
+
+.prices-list
+	margin: 0
+	padding: 0
+	list-style-type: none
+	
+	&__i
+		margin: 0 0 14px 0
+		padding: 0
+
+	&__price
+		font-weight: bold
+
+	&__sub
+		margin: 14px 0 14px 10px
+		padding: 0
+		list-style-type: none
+		
+	&__sub-i
+		margin: 0 0 6px 0
+		padding: 0 0 0 10px
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 12px
+			left: 0
+			width: 5px
+			height: 1px
+			background: $text_color
+		
+		
+
+/* prices-list
+/* ---------------------------------------END--- */
+
+
+/* attention-mark
+/* --------------------------------------------- */
+
+.attention-mark
+	font-weight: bold
+	color: #ffb129
+
+/* attention-mark
+/* ---------------------------------------END--- */
+
+
+/* txt-center
+/* --------------------------------------------- */
+
+.txt-center
+	text-align: center
+
+/* txt-center
+/* ---------------------------------------END--- */
+
+
+/* txt-right
+/* --------------------------------------------- */
+
+.txt-right
+	text-align: right
+
+/* txt-right
+/* ---------------------------------------END--- */
+
+
+/* footer
+/* --------------------------------------------- */
+
+.footer
+	background: $main_color
+	&__body
+		@extend %center
+		display: table
+
+	&__i
+		height: 80px
+		display: table-cell
+		vertical-align: middle
+		&_made-by
+			text-align: right
+
+/* footer
+/* ---------------------------------------END--- */
+
+
+/* counters
+/* --------------------------------------------- */
+
+.counters
+	display: inline-block
+	vertical-align: middle
+	a
+		border-bottom: none
+		display: block
+	&__i
+		display: inline-block
+		margin-right: 10px
+	img
+		display: block
+
+/* counters
+/* ---------------------------------------END--- */
+
+
+/* map
+/* --------------------------------------------- */
+
+.map
+	position: relative
+	// display: none
+	height: 505px
+	background: #d0cfcf
+	overflow: hidden
+
+/* map
+/* ---------------------------------------END--- */
+
+
+/* contacts
+/* --------------------------------------------- */
+
+.contacts
+	z-index: 100
+	@extend %center
+	position: relative
+
+	p
+		margin-bottom: 30px
+	
+	&__body
+		z-index: 100
+		position: absolute
+		right: 0
+		bottom: 0
+		top: 0
+		width: 678px
+		height: 505px
+		color: #fff
+		
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			width: 9999px
+			bottom: 0
+			left: 0
+			background: rgba(#313131, .85)
+
+	&__in
+		position: relative
+		z-index: 1
+		
+		padding-left: 56px
+
+
+	&__inf
+		float: left
+		width: 340px
+
+	&__form
+		float: right
+		width: 282px
+
+	&__h
+		margin-bottom: 14px
+		+rem(font-size, 15px)
+
+	&__h-sm
+		+rem(font-size, 13px)
+	
+/* contacts
+/* ---------------------------------------END--- */
+
+
+/* input
+/* --------------------------------------------- */
+
+.input
+	width: 280px
+	
+	background: #fff
+	color: $text_color
+	padding: 0 16px
+	+rem(font-size, 16px)
+	@extend %bszbb
+	//+transition-property(box-shadow)
+	//+transition-duration(0.3s)
+	border: 1px solid $placeholder_color
+	+transition-duration(.1s)
+	+transition-property(border-color)
+
+	&_w_fluid
+		width: 100%
+
+	&_error
+		border-color: $color_imp
+
+	&:focus
+		outline: 0 !important
+		//+box-shadow(0 0 10px rgba($focus_color, 1))
+
+input.input
+	height: 40px
+
+textarea.input
+	height: 149px
+	padding: 16px
+
+/* input
+/* ---------------------------------------END--- */
+
+
+/* form-line
+/* --------------------------------------------- */
+
+.form-line
+	margin-bottom: 14px
+
+/* form-line
+/* ---------------------------------------END--- */
+
+
+/* button
+/* --------------------------------------------- */
+
+.button
+	$button_h: 51px
+
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+	position: relative
+	display: inline-block
+	overflow: visible
+	border: none
+	color: #313131 !important
+	text-align: center
+	text-decoration: none
+	cursor: pointer
+	vertical-align: middle
+	outline: none
+	+rem(font-size, 15px)
+	text-transform: uppercase
+	padding: 0 34px
+	white-space: nowrap
+	height: $button_h
+	line-height: $button_h - 7
+	font-weight: bold
+	background-color: $main_color
+	border: none
+	@extend %bszbb
+	+transition-duration(.9s)
+	+transition-property(background-color, color)
+	+box-shadow(2px 2px 0 #e5a537)
+	
+	&:hover
+		background-color: $main_color
+		+transition-duration(.4s)
+
+	&:active
+		+box-shadow(0 0 0 #e5a537)
+		top: 2px
+		left: 2px
+		line-height: $button_h + 2
+
+	
+
+/* button
+/* ---------------------------------------END--- */
+
+
+/* main-nav
+/* --------------------------------------------- */
+
+.main-nav
+	$menu_h: 62px
+	background: $main_color
+	@extend %clear
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: table
+		margin: auto
+		
+	&__i
+		margin: 0
+		padding: 0
+		float: left
+		text-transform: uppercase
+		font-weight: bold
+
+	&__a
+		position: relative
+		display: block
+		padding: 0 36px
+		border-bottom: none
+		height: $menu_h
+		line-height: $menu_h
+		+link-color ($color: $link_color, $color_hover: #fff, $color_visited: none)
+		+transition-property(background)
+		&:hover
+			background: $main_color2
+			&:before
+				+opacity(0)
+
+		&:before
+			+opacity(1)
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -12px
+			right: -1px
+			width: 1px
+			height: 24px
+			background: $main_color2
+			@include transition-duration($animation_time)
+			+transition-property(opacity)
+
+	&__i:last-child &__a
+		&:before
+			display: none
+
+		
+
+
+/* main-nav
+/* ---------------------------------------END--- */
+
+
+/* persons
+/* --------------------------------------------- */
+
+.persons
+	@extend %clear
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__i
+		@extend %bszbb
+		margin: 0
+		padding: 0 70px 0 0
+		float: left
+		width: (100%/3)
+
+	&__name
+		+rem(font-size, 20px)
+		text-transform: uppercase
+		margin-bottom: 7px
+
+	&__img
+		margin-bottom: 24px
+		display: block
+		
+
+
+/* persons
+/* ---------------------------------------END--- */
+
+
+/* logo
+/* --------------------------------------------- */
+
+.logo
+	display: block
+	position: absolute
+	width: 240px
+	height: 70px
+	border-bottom: none
+	top: 29px
+	left: 0
+
+	&__img
+		display: block
+
+	
+/* logo
+/* ---------------------------------------END--- */
+
+
+/* phone
+/* --------------------------------------------- */
+
+.phone
+	font-weight: bold
+	+rem(font-size, 20px)
+	&__code
+		color: $main_color
+		font-weight: normal
+
+/* phone
+/* ---------------------------------------END--- */
+
+
+/* table
+/* --------------------------------------------- */
+
+.table 
+	margin-bottom: 20px
+	width: 100%
+	border: 2px solid #e9ecee
+
+	&__h td,
+	& th 
+		font-size: 13px
+		font-weight: bold
+		color: #888
+		background: #e9ecee
+
+	& th,
+	& td
+		padding: 10px 14px
+		border-bottom: 1px solid #e9ecee
+
+	&__line
+		background: #f6f6f6
+
+	
+/* table
+/* ---------------------------------------END--- */
+
+
+
