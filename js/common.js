@@ -2,9 +2,39 @@
 	$(function() {
 
 		goToElement ();
+		detectIfScroll();
+
+		window.onscroll = function() {
+
+			detectIfScroll();
+		
+		};
  
 		
 	});
+
+
+	function detectIfScroll () {
+		
+		var scrollFromTop = $(window).scrollTop();
+		var fixedState = 'is-fixed';
+		var targetBlock = $('.main-nav__body');
+		var navTop = $('.main-nav').offset().top;
+
+		var wH = $(window).height();
+		var docH = $(document).height();
+
+
+		if (scrollFromTop > navTop) {
+
+			targetBlock.addClass( fixedState );
+		} else	{
+
+			targetBlock.removeClass( fixedState );
+		}
+
+
+	} // detectIfScroll
 
 
 	function goToElement () {
@@ -21,7 +51,7 @@
 
 
 		    $('html, body').stop().animate({
-		        scrollTop: target.offset().top
+		        scrollTop: target.offset().top - 62
 		        
 		    }, speed, 'easeInOutCubic');
 		});

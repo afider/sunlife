@@ -1129,7 +1129,21 @@ textarea.input {
 /* main-nav */
 /* --------------------------------------------- */
 .main-nav {
+  height: 62px;
+}
+.main-nav__body {
+  position: relative;
   background: #ffed63;
+}
+.main-nav__body.is-fixed {
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .main-nav__lst {
   margin: 0;

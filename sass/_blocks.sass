@@ -524,8 +524,19 @@ textarea.input
 
 .main-nav
 	$menu_h: 62px
-	background: $main_color
 	@extend %clear
+	height: $menu_h
+
+	&__body
+		position: relative
+		background: $main_color
+		&.is-fixed
+			+box-shadow(0 0 15px rgba(#000, .6))
+			z-index: 101
+			position: fixed
+			top: 0
+			right: 0
+			left: 0
 
 	&__lst
 		margin: 0
