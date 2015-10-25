@@ -1239,6 +1239,7 @@ textarea.input {
 .persons__img {
   margin-bottom: 24px;
   display: block;
+  border-radius: 50%;
 }
 
 /* persons */
